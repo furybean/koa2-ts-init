@@ -5,22 +5,22 @@ import * as fs from 'fs';
 const conf = convict({
   env: {
     doc: 'The application environment.',
-    format: ['production', 'development', 'test'],
-    default: 'development',
-    env: 'NODE_ENV',
+    format: ['alpha', 'beta', 'prod'],
+    default: 'alpha',
+    env: 'NODE_ENV'
   },
   ip: {
     doc: 'The ip address to bind.',
     format: 'ipaddress',
-    default: '127.0.0.1',
-    env: 'IP_ADDRESS',
+    default: '0.0.0.0',
+    env: 'IP_ADDRESS'
   },
   port: {
     doc: 'The port to bind.',
     format: 'port',
     default: 4000,
-    env: 'PORT',
-  },
+    env: 'PORT'
+  }
 });
 const d = debug('kickstarter:conf');
 const env = conf.get('env');

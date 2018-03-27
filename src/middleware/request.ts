@@ -7,5 +7,5 @@ const logger = async (ctx: Context, next: Function) => {
 };
 
 export default () => compose([
-  logger,
+  logger
 ]);

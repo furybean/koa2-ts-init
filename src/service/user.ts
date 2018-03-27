@@ -2,7 +2,7 @@ const users = [
   'ava',
   'boyd',
   'raylan',
-  'winona',
+  'winona'
 ];
 
 export const getUsers = () => users;

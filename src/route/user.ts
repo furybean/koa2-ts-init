@@ -5,7 +5,7 @@ import * as Router from 'koa-router';
 import * as Ctrl from '../controller/user';
 
 const router = new Router({
-  prefix: '/user',
+  prefix: '/user'
 });
 
 router.get('/', Ctrl.get);
@@ -14,12 +14,12 @@ router.put('/', Ctrl.put);
 
 const routes = router.routes();
 const allowedMethods = router.allowedMethods({
-  throw: true,
-  notImplemented: () => notImplemented(),
   methodNotAllowed: () => methodNotAllowed(),
+  notImplemented: () => notImplemented(),
+  throw: true
 });
 
 export default () => compose([
   routes,
-  allowedMethods,
+  allowedMethods
 ]);

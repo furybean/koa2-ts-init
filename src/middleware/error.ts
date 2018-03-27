@@ -20,5 +20,5 @@ const handler = async (ctx: Context, next: Function) => {
 };
 
 export default () => compose([
-  handler,
+  handler
 ]);
